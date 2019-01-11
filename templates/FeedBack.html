@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>FeedBack</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="/static/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+<!--===============================================================================================-->
+<style>
+	.limiter .container-table100 .wrap-table100 .login input[type=submit]{
+	width: 128.5px !important;
+	height: 35px !important;
+	background: #fff !important;
+	border: 1px solid #fff !important;
+	cursor: pointer !important;
+	border-radius: 2px !important;
+	color: #000 !important;
+	font-family: 'Exo', sans-serif !important;
+	font-size: 16px !important;
+	font-weight: 400 !important;
+	padding: 6px !important;
+	margin-top: 10px !important;
+	display: inline-block !important;
+}
+
+.limiter .container-table100 .wrap-table100 .login input[type=submit]:hover{
+	background: #000 !important;
+	color: #fff !important;
+}
+
+.limiter .container-table100 .wrap-table100 .login input[type=submit]:active{
+	opacity: 0.8 !important;
+}
+</style>
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th>Message</th>
+								<th>Date</th>
+								<th>Username</th>
+							</tr>
+						</thead>
+						<tbody>
+								{% for r in data %}
+								<tr>
+								{% for x in range(0,3) %}
+								<td>{{ r[x] }}</td>
+								{% endfor %}
+								</tr>
+								{% endfor %}
+						</tbody>
+					</table>
+					<br>
+				</div>
+
+	<form action="{{ url_for("FeedBack") }}" method="post">
+		<input class="login" type="submit" name="submit" value="Back">
+	</form>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="/static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/bootstrap/js/popper.js"></script>
+	<script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/js/main.js"></script>
+
+</body>
+</html>

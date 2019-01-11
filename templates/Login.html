@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/Login.css">
+  <script src="/static/css/script1.js"></script>
+
+</head>
+
+<body>
+
+  <div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>Book<span>MyShow</span></div>
+		</div>
+		<br><br>
+		<div class="login">
+			{% if error %}
+  				<p><strong>Error: {{ error }}</strong></p>
+  			{% endif %}		
+            <form action="/Login" method="post">
+				<input type="text" name="user" placeholder="Username" name="user" required><br>
+				<input type="password" name="pass" placeholder="Password" name="password" required><br>
+				<input type="submit" name="cred" value="Login">
+				<input type="submit" name="cred" value="SignUp">
+            </form>
+		</div>
+  <script src='/static/css/script2.js'></script>
+
+</body>
+
+</html>

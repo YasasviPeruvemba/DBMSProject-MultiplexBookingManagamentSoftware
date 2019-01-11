@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.min.css" />
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="/static/css/BookNow.css" />
+
+    <title>Contact Us</title>
+    <style>
+.submit-btn{
+    width: 128.5px !important;
+    height: 35px !important;
+    background: #ffc001 !important;
+    border: 1px solid #fff !important;
+    cursor: pointer !important;
+    border-radius: 2px !important;
+    color: #000 !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    padding: 6px !important;
+    margin-top: 10px !important;
+    display: inline-block !important;
+    font-weight: 700 !important;
+}
+
+.submit-btn:hover{
+    background: #000 !important;
+    color: #fff !important;
+}
+    </style>
+</head>
+<body style="overflow: hidden;">
+
+    <div id="booking" class="section">
+        <div class="section-center">
+            <div class="container">
+                <div class="row">
+                    <div class="booking-form">
+                         <div class="form-header">
+                            <h1>Contact Us</h1>
+                        </div>
+                        <form style="padding-left:50px" id="form" action="{{ url_for("ContactUs",username=username) }}" class="topBefore" method="post">
+                            <div style="display: table-row;">
+                            <div style="display: table-cell;">
+                                    <p style="font-size:20px; color: #fff !important;">
+                                    We at BookMyShow have always tried our level best to provide you with
+                                    the best possible services. We have people willing to help you out even for the
+                                    slightest issues you face. Feel free to fill up the form and we guarantee to contact you back within 24 hours.
+                                    </p>
+            <!--            <p style="padding-top:100px;" >
+                    <address style="font-size:25px;padding-left:25px;">
+                        <h2>Address:</h2>
+                        DLF Mall Of India<br />
+                        Sector 18<br />
+                        Noida<br />
+                    </address>
+                </p>
+        -->
+                            </div>
+                        </div>
+                        <br>
+                        <div  style="display: table-row; padding-left: 10px; margin-right: 40px;">
+                          <header style="font-size:40px; color: #fff;">Fill this form</header><br>
+                          <textarea id="message" class="form-control" style="width: 500px; height: 100px;" form="form" name="message" type="text" placeholder="Enter Message"></textarea><br>
+                          <input id="submit" class="submit-btn" type="submit" style="width:200px;" value="SUBMIT">
+                        </div>
+                        </form>                  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
